@@ -10,5 +10,7 @@ class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     val image = view.findViewById<ImageView>(R.id.image_view)
     fun bind(number: Int){
         text.text = "$number"
+        if (number % 2 == 0)
+            image.setBackgroundColor(0xFFC62E2E.toInt())
     }
 }

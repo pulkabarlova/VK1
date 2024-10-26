@@ -20,13 +20,14 @@ class MyAdapter : RecyclerView.Adapter<MyViewHolder>() {
     }
 
     fun setItems(list: List<Int>) {
+        val previousSize = items.size
         items.clear()
         items.addAll(list)
-        notifyDataSetChanged()
+        notifyItemRangeInserted(previousSize, list.size)
     }
 
     fun addItems(item: Int) {
         items.add(item)
-        notifyDataSetChanged()
+        notifyItemInserted(items.size - 1)
     }
 }
