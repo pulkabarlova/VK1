@@ -11,6 +11,6 @@ class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     fun bind(number: Int){
         text.text = "$number"
         if (number % 2 == 0)
-            image.setBackgroundColor(0xFFC62E2E.toInt())
+            image.setBackgroundResource(R.color.red)
     }
 }
